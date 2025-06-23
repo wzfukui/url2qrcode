@@ -1,3 +1,8 @@
-input {
+#qrimg {
+    text-align: center;
+    margin-bottom: 15px;
+}
+#qrimg svg {
     width: 100%;
+    height: auto;
 }
