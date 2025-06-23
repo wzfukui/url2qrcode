@@ -9,7 +9,7 @@ function refreshQR(text) {
     const qr = qrcode(0, 'L');
     qr.addData(value);
     qr.make();
-    qrimg.innerHTML = qr.createSvgTag(4);
+    qrimg.innerHTML = qr.createSvgTag(12);
 }
 
 qrtext_url.addEventListener('input', () => refreshQR());
