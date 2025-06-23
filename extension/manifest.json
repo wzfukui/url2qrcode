@@ -1,0 +1,35 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "url2qrcode",
+    "description": "fast current url to QRcode tool",
+    "version": "1.0.0",
+"manifest_version": 3,
+"action": {
+    "default_popup": "index.html",
+    "default_icon": "icons/icon_50.png"
+},
+"background": {
+   "service_worker": "js/background.js"
+},
+"content_scripts": [{
+   "all_frames": false,
+   "css": [],
+   "js": [ "js/content.js" ],
+   "matches": [ "http://*/*", "https://*/*" ]
+}],
+"content_security_policy": {
+   "extension_pages": "script-src 'self'; object-src 'self'"
+},
+    "commands": {
+      "_execute_action": {
+        "suggested_key": {
+          "default": "Ctrl+Q",
+          "mac": "MacCtrl+F"
+        },
+        "description": "Opens hello.html"
+      }
+    },
+    "permissions": [ "tabs", "contextMenus" ]
+  
+}
