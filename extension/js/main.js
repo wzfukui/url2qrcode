@@ -1,3 +1,4 @@
+// Update the QR code display with the provided text or current input
 function refreshQR(text) {
     const value = qrtext_url.value || text || '';
     qrcode.stringToBytes = qrcode.stringToBytesFuncs['UTF-8'];
@@ -7,12 +8,15 @@ function refreshQR(text) {
     qrimg.innerHTML = qr.createSvgTag(4);
 }
 
+// Grab elements we need
+const copyBtn = document.getElementById('copy-btn');
+
 qrtext_url.addEventListener('input', () => refreshQR());
 
-copy_btn.addEventListener('click', () => {
+copyBtn.addEventListener('click', () => {
     navigator.clipboard.writeText(qrtext_url.value).then(() => {
-        copy_btn.innerText = 'Copied!';
-        setTimeout(() => { copy_btn.innerText = 'Copy'; }, 2000);
+        copyBtn.innerText = 'Copied!';
+        setTimeout(() => { copyBtn.innerText = 'Copy'; }, 2000);
     });
 });
 
