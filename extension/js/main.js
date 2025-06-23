@@ -1,3 +1,8 @@
+const qrimg = document.getElementById('qrimg');
+const qrtext_url = document.getElementById('qrtext_url');
+const qrtext_title = document.getElementById('qrtext_title');
+const copy_btn = document.getElementById('copy-btn');
+
 function refreshQR(text) {
     const value = qrtext_url.value || text || '';
     qrcode.stringToBytes = qrcode.stringToBytesFuncs['UTF-8'];
