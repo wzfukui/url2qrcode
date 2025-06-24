@@ -1,7 +1,7 @@
 {
 "update_url": "https://clients2.google.com/service/update2/crx",
 
-    "name": "url2qrcode",
+    "name": "Url2QRCode",
     "description": "fast current url to QRcode tool",
     "version": "1.0.0",
 "manifest_version": 3,
